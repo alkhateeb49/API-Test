@@ -1,8 +1,9 @@
 const express = require('express');
 const app=express();
-const port = 5000;
 require('dotenv').config()
-console.log(process.env);
+console.log(process.env.STATUS);
+
+const PORT=process.env.PORT;
 
 
 
@@ -19,7 +20,7 @@ function show(req, res) {
 
 
 
-    app.listen(port,()=>{
-        console.log("App runing on : "+port);
+    app.listen(PORT,()=>{
+        console.log("App runing on : "+PORT);
     });
 
